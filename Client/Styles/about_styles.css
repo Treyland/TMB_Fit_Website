@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style NavBar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0);
+    color: rgba(255, 255, 255);
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+}
+
+.nav-list {
+list-style-type: none;
+}
+
+.nav-list li {
+display: inline-block;
+padding: 1.5rem 1rem;
+font-size: 1.2rem;  
+}
+
+.navbar a {
+color: white;
+text-decoration: none;
+}
+
+.navbar a:hover {
+}
+
+.logo {
+position: absolute;
+left: .5rem;
+}
+
+.logo img {
+height: 3rem;
+width: 4rem;
+}
+
+/* Style Mission Section */
+.mission-section {
+    display: flex;
+    margin-top: 5rem;
+    height: 40rem;
+    align-items: center;
+}
+
+.mission-container {
+    width: 33%;
+    margin-left: 2rem;
+}
+
+.mission-container h1 {
+    margin-bottom: 2rem;
+}
+
+.mission-container p {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#mission-title {
+    font-size: 3rem;
+}
+
+/* Style Values Section */
+.values-section {
+    margin-top: 3rem;
+    display: flex;
+    height: 30rem;
+    width: 100%;
+}
+
+.values-container {
+    width: 50%;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+
+.values-container h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.values-list {
+    padding: 0 1rem;
+    margin: 0 1rem;
+}
+
+.values-list li {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+
+.values-list li ul li {
+    font-weight: normal;
+    margin-left: 1rem;
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+.faq-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.faq-container h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.faq-list {
+    padding: 0 1rem;
+    margin: 0 1rem;
+ }
+
+ .faq-list li {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+ }
+
+ .faq-list li ul li {
+    font-weight: normal;
+    margin-left: 1rem;
+    font-size: 1rem;
+    margin-top: 0;
+ }
+
+
+/* Style Quote Section */
+.quote-section {
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(49, 62, 80);
+}
+
+.quote-container {
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.quote-container h2 {
+    margin-bottom: 1rem;
+}
