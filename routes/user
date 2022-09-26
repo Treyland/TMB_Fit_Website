@@ -1,0 +1,87 @@
+const express = require('express');
+const router = express.Router();
+const validInfo = require("../Middleware/ValidInfo");
+const authorization = require("../Middleware/Authorization");
+const bcrypt = require('bcrypt');
+const jwtGenerator = require("../utils/jwtgenerator");
+const pool = require("../database");
+
+
+// Register Route
+router.post('/register', validInfo, async (req, res) => {
+    // 1. Destructure req.body
+      const { name, email, password } = req.body;
+      try {
+    // 2. Check if user exists
+      const data = await pool.query(`SELECT * FROM users WHERE email = $1;`, [email]);
+      if (data.rows.length !== 0) {
+        return res.status(400).json({
+          error: "Email already in use.",
+        });
+        }
+    // 3. hash user's password
+        const hash = await bcrypt.hash(password, 10);
+         
+    // 4. insert data into database
+        const newUser = await pool.query(`INSERT INTO users (name, email, password) VALUES ($1, $2, $3) RETURNING *;`, [name, email, hash]);
+
+    // 5. Generate JWT token
+        const token = jwtGenerator(newUser.rows[0].id)
+        res.json({ token });
+    // 6. SAVE TOKEN IN COOKIE     
+      }
+      catch (err) {
+        console.error(err.message);
+        res.status(500).send("Server Error")
+      };
+    });
+
+// Login Route
+  router.post('/login', validInfo, async (req, res) => {
+    //1. Destructure req.body
+    const { email, password } = req.body;
+    try {
+    //2. Check if user doesn't exist
+    const user = await pool.query(`SELECT * FROM users WHERE email= $1;`, [email])
+    if (user.rows.length === 0) {
+        res.status(400).json({
+        error: "User is not registered, Sign Up First",
+            });
+        }
+    //3. Check if already logged in
+    //4. Compare hashed password w/ user's password
+    const validPassword = await bcrypt.compare(password, user.rows[0].password);
+      if (!validPassword) {
+        return res.status(401).json("Password or Email is incorrect");
+      }
+    //5. Give JWT Token
+    const token = jwtGenerator(user.rows[0].id);
+    //res.json({ token });
+    //res.redirect('/'); 
+    //6. Store Token in cookie
+    return res.cookie("access_token", token, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        maxAge: 3600000
+    }).status(200).json({ message: "Logged in successfully" });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({
+        error: "Database error occured while signing in!",
+        });
+      };
+
+    }
+);
+
+//Verification Route
+router.get("/is-verify", authorization, async (req, res) => {
+  try{
+    res.json(true);
+  } catch (err) {
+      console.error(err.message);
+      res.status(500).send("server Error");
+    }
+});
+
+module.exports = router;

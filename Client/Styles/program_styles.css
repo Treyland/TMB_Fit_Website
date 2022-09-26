@@ -63,3 +63,69 @@ width: 4rem;
 }
 
 /* Style Programs Section */
+.program-section {
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    margin-top: 2rem;
+}
+
+.program-card {
+    box-shadow: 0 .2rem .5rem 0 rgba(0,0,0,.2);
+    transition: .3s;
+    width: 20rem;
+    height: 25rem;
+    color: rgba(255, 255, 255);
+    background-color: rgba(49, 62, 80);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-container button {
+    margin-top: .5rem;
+}
+
+.services-section {
+    margin-top: 2rem;
+}
+
+.services-container {
+    text-align: center;
+}
+
+.services-container h1 {
+    margin-bottom: 1.5rem;
+}
+
+
+
+.schedule-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    height: 20rem;
+    text-align: center;
+}
+
+.service-card {
+    width: 15rem;
+    height: 100%;
+    background-color: rgba(49, 62, 80);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255);
+}
+
+.service-card button {
+    margin-top: 5rem;
+}

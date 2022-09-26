@@ -89,16 +89,21 @@
     margin-bottom: .5rem;
 }
 
+.program-container {
+    border: .15rem solid rgba(255, 255, 255);
+}
+
 /* style program card*/
 .program-card {
     box-shadow: 0 .2rem .5rem 0 rgba(0,0,0,.2);
     transition: .3s;
-    width: 25%;
+    width: 20%;
     height: 15rem;
     background-color: rgba(49, 62, 100,.6);
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 1rem;
 }
 
 .program-card:hover {
@@ -107,6 +112,13 @@
 
 .card-container {
     padding: .2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-container button {
+    margin-top: .5rem;
 }
 
 /* Style Facts Section */
