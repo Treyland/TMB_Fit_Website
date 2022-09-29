@@ -5,43 +5,48 @@
 
 /* Style NavBar */
 .navbar {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        background-color: rgba(0, 0, 0);
-        color: rgba(255, 255, 255);
-        width: 100%;
-        height: 5rem;
-        position: fixed;
-        top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0);
+    color: rgba(255, 255, 255);
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    top: 0;
 }
 
 .nav-list {
-    list-style-type: none;
+list-style-type: none;
+display: flex;  
+flex-flow: row wrap;
+justify-content: flex-end;
 }
 
 .nav-list li {
-    display: inline-block;
-    padding: 1.5rem 1rem;
-    font-size: 1.2rem;  
+display: block;
+padding: 1.5rem 1rem;
+font-size: 1.2rem;  
 }
 
 .navbar a {
-    color: white;
-    text-decoration: none;
+color: white;
+text-decoration: none;
+display: block;
 }
 
-.navbar a:hover {
+.navbar li:hover {
+    background: rgba(49, 62, 80);
 }
 
 .logo {
-    position: absolute;
-    left: .5rem;
+position: absolute;
+left: .5rem;
 }
 
 .logo img {
-    height: 3rem;
-    width: 4rem;
+height: 3rem;
+width: 4rem;
 }
 
 /*style TMB section*/
@@ -87,10 +92,19 @@
 
 .program h1 {
     margin-bottom: .5rem;
+    text-align: center;
 }
 
 .program-container {
     border: .15rem solid rgba(255, 255, 255);
+    border-radius: .5rem;
+    box-shadow: 0 1px 1rem 0 rgba(255, 255, 255, .2);
+    padding: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 0;
+    list-style: none;
 }
 
 /* style program card*/
@@ -103,7 +117,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1rem;
 }
 
 .program-card:hover {
@@ -116,10 +129,22 @@
     flex-direction: column;
     align-items: center;
 }
-
-.card-container button {
-    margin-top: .5rem;
+.card-container h4 {
+    text-align: center;
+    font-size: 1.25rem;
 }
+
+.card-container p {
+    margin-top: .75rem;
+}
+
+.program-card button {
+    margin-top: .75rem;
+}
+
+/*.card-container button {
+    margin-top: .5rem;
+}*/
 
 /* Style Facts Section */
 .facts {

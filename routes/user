@@ -59,11 +59,12 @@ router.post('/register', validInfo, async (req, res) => {
     //res.json({ token });
     //res.redirect('/'); 
     //6. Store Token in cookie
-    return res.cookie("access_token", token, {
+    res.cookie("access_token", token, {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
         maxAge: 3600000
-    }).status(200).json({ message: "Logged in successfully" });
+    });//.status(200).json({ message: "Logged in successfully" });
+    res.redirect("/profile");
     } catch (err) {
         console.log(err);
         res.status(500).json({

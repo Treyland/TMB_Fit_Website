@@ -21,6 +21,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(__dirname + '/Client/Styles/'));
 app.use(express.static(__dirname + '/Client/Images/'));
+app.use(express.static(__dirname + '/Client/JS/'));
 app.use(cookieParser());
 app.use("/users", user); //Route for /user endpoint of API
 
@@ -89,6 +90,12 @@ app.get("/protected", authorization, async (req, res) => {
     console.error(err.message);
   }
 });
+
+//Get All program Data
+app.get('/programdata', async (req, res) => {
+  const allPrograms = await pool.query("SELECT * from programs");
+  res.json(allPrograms.rows);
+})
 
 //editName Route
 app.post('/users/editName', validInfo, authorization, async (req, res) => {

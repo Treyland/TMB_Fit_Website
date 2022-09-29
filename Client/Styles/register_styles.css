@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style NavBar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0);
+    color: rgba(255, 255, 255);
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+}
+
+.nav-list {
+list-style-type: none;
+display: flex;  
+flex-flow: row wrap;
+justify-content: flex-end;
+}
+
+.nav-list li {
+display: block;
+padding: 1.5rem 1rem;
+font-size: 1.2rem;  
+}
+
+.navbar a {
+color: white;
+text-decoration: none;
+display: block;
+}
+
+.navbar li:hover {
+    background: rgba(49, 62, 80);
+}
+
+.logo {
+position: absolute;
+left: .5rem;
+}
+
+.logo img {
+height: 3rem;
+width: 4rem;
+}
+
+/*Style Register Section*/
+.register-container {
+    margin-top: 5rem;
+    display: flex;
+    height: 50rem;
+    width: 100%;
+    background-color: rgba(49, 62, 80);
+}
+
+.register-form-container {
+    height: 30rem;
+    width: 30rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 5px inset rgba(0, 0, 0);
+    background-color: rgba(255, 255, 255);
+}
+
+.register-form-container h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    text-decoration: underline;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    
+}
+form div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: .5rem;
+}
+
+form div label {
+    margin-right: .5rem;
+    font-size: 2rem;
+}
+
+form div input {
+    width: 20rem;
+}
+
+form button {
+    width: 4rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.register-form-container a {
+    text-align: center;
+}
+

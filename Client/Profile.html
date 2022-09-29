@@ -18,15 +18,20 @@
         </ul>
     </nav>
 
+  <div class="profile-container">
     <div class="profile-section">
-      <div class="left-container">  
+      <div class="left-container"> 
+        <div>
         <img alt="user">
+        </div>
+        <div>
         <form action="/users/editName" method="POST">
-          <label for="name">Name</label>
+          <h4 id="displayName"></h4>
+          <button>Edit</button>
           <input type="name" id="name" name="name"
           required>
-          <button>Edit</button>
         </form>
+        </div>
       </div>
 
       <div class="right-container">
@@ -35,12 +40,14 @@
           <div class="info_data">
           <form action="/users/editEmail" method="POST">
             <div class="data">
-              <label for="email">Email</label>
+              <h4 id="displayEmail"></h4>
+              <button>Edit</button>
               <input type="email" id="email" name="email" 
               required>
-              <button>Edit</button>
             </div>
           </form>
+         </div>
+        </div>
 
       <div class="programs">
         <h3>Programs</h3>
@@ -57,12 +64,14 @@
             <p>Date Completed</p>
           </div>
           </div>
-          <form action="/logout" method="GET">
-            <button id="logout" type="submit">Log Out</button>
-          </form>
         </div>
+        <form action="/logout" method="GET">
+          <button id="logout" type="submit">Log Out</button>
+        </form>
       </div>
     </div>
+  </div>
+<script src="/profile_page.js"></script>
 
   </body>
 </html>

@@ -18,10 +18,13 @@
 
 .nav-list {
 list-style-type: none;
+display: flex;  
+flex-flow: row wrap;
+justify-content: flex-end;
 }
 
 .nav-list li {
-display: inline-block;
+display: block;
 padding: 1.5rem 1rem;
 font-size: 1.2rem;  
 }
@@ -29,9 +32,11 @@ font-size: 1.2rem;
 .navbar a {
 color: white;
 text-decoration: none;
+display: block;
 }
 
-.navbar a:hover {
+.navbar li:hover {
+    background: rgba(49, 62, 80);
 }
 
 .logo {
