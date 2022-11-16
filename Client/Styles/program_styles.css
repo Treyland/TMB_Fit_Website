@@ -56,15 +56,27 @@ width: 4rem;
     margin-top: 5rem;
     display: flex;
     align-items: center;
+    background: linear-gradient(
+        to left, transparent, rgb(49, 62, 80)
+    ),
+    url(../Images/dumbbell\ rack.jpg) no-repeat right/cover;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    box-shadow: 0 1px 1rem 0 rgba(0, 0, 0, .3);
 }
 
 .invest-container {
     width: 33%;
     margin-left: 2rem;
+    color:rgba(255, 255, 255);
 }
 
 .invest-container h1 {
+    font-size: 2rem;
     margin-bottom: 2rem;
+}
+
+.invest-container p {
+    font-size: 1.25rem;
 }
 
 /* Style Programs Section */
@@ -75,11 +87,6 @@ width: 4rem;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    margin-top: 2rem;
-    border: 1px solid rgba(53, 60, 78);
-    border-radius: .5rem;
-    box-shadow: 0 1px 1rem 0 rgba(69, 90, 100, .3);
-    padding: 1rem;
 }
 
 .program-card {
@@ -95,25 +102,32 @@ width: 4rem;
     margin: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: 75%;
+    width: 100%;
 }
 
 .card-container h4 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: center;
 }
 
 .card-container p {
-    margin-top: .75rem;
+    font-size: 1rem;
+    margin-top: .5rem;
 }
 
 .card-container button {
-    margin-top: .75rem;
-    width: 2.5rem;
+    width: 3.5rem;
+    height: 2rem;
+    margin-top: 3rem;
 }
 
 .services-section {
     margin-top: 2rem;
+    border-top: 2px solid rgb(0, 0, 0);
+    box-shadow: 0 1px 1rem 0 rgba(0, 0, 0, .3);
 }
 
 .services-container {
@@ -136,7 +150,7 @@ width: 4rem;
 }
 
 .service-card {
-    width: 15rem;
+    width: 20rem;
     height: 100%;
     background-color: rgba(49, 62, 80);
     display: flex;
@@ -151,15 +165,23 @@ width: 4rem;
 
 .card-block h4 {
     font-size: 1.5rem;
-    margin-bottom: .75rem;
+}
+
+.card-block p {
+    margin-top: .5rem;
 }
 
 #price {
-    margin-top: .75rem;
-    margin-bottom: .25rem;
+    margin-top: 2rem;
+
 }
 
 .card-block button {
+    margin-top:.5rem;
     width: 8rem;
-    height: 1.5rem;
+    height: 2rem;
+}
+
+button {
+    cursor: pointer;
 }

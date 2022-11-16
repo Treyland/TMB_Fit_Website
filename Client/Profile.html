@@ -2,12 +2,12 @@
 <html>
   <head>
     <title>TMB Fit Profile</title>
-    <link rel="stylesheet" type="text/css" href="/profile_styles.css">
+    <link rel="stylesheet" type="text/css" href="Styles/profile_styles.css">
   </head>
 
   <body>
     <nav class="navbar">
-        <div class="logo"><img src="/GrayLogo.png" alt="Logo">
+        <div class="logo"><img src="Images/GrayLogo.png" alt="Logo">
         </div>
         <ul class="nav-list">
           <li><a href="/">Home</a></li>
@@ -50,28 +50,18 @@
         </div>
 
       <div class="programs">
-        <h3>Programs</h3>
+        <h3> My Programs</h3>
         <div class="programs_data">
-          <div class="data">
-            <h4>Current</h4>
-            <p>Program Title</p>
-            <label>Progress</label>
-            <progress></progress>
-          </div>
-          <div class="data">
-            <h4>Completed</h4>
-            <p>Program Title</p>
-            <p>Date Completed</p>
-          </div>
-          </div>
+          <ul id = "myList">
+          </ul>
+        </div>
         </div>
         <form action="/logout" method="GET">
           <button id="logout" type="submit">Log Out</button>
         </form>
-      </div>
     </div>
   </div>
-<script src="/profile_page.js"></script>
+<script src="JS/profile_page.js"></script>
 
   </body>
 </html>

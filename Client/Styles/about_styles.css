@@ -55,11 +55,18 @@ width: 4rem;
     margin-top: 5rem;
     height: 40rem;
     align-items: center;
+    background: linear-gradient(
+        to left, transparent, rgb(49, 62, 80)
+    ),
+    url(../Images/dumbbell\ rack.jpg) no-repeat right/cover;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    box-shadow: 0 1px 1rem 0 rgba(0, 0, 0, .3);
 }
 
 .mission-container {
     width: 33%;
     margin-left: 2rem;
+    color: rgb(255, 255, 255);
 }
 
 .mission-container h1 {
@@ -154,6 +161,8 @@ width: 4rem;
     justify-content: center;
     align-items: center;
     background-color: rgba(49, 62, 80);
+    border-top: 2px solid rgb(0, 0, 0);
+    box-shadow: 0 1px 1rem 0 rgba(0, 0, 0, .3);
 }
 
 .quote-container {

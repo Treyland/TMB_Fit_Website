@@ -1,6 +1,6 @@
 const programContainer = document.getElementsByClassName('program-container')[0];
 
-fetch('http://localhost:3000/programdata_notcustom')
+fetch('http://localhost:3000/programdata')
 .then(response => {return response.json()})
 .then(data => {
     data.forEach(element => {

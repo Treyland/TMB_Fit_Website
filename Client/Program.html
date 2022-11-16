@@ -2,12 +2,12 @@
 <html>
   <head>
     <title>TMB Fit Programs</title>
-    <link rel="stylesheet" type="text/css" href="/program_styles.css">
+    <link rel="stylesheet" type="text/css" href="Styles/program_styles.css">
   </head>
 
 <body>
   <nav class="navbar">
-      <div class="logo"><img src="/GrayLogo.png" alt="Logo">
+      <div class="logo"><img src="Images/GrayLogo.png" alt="Logo">
       </div>
       <ul class="nav-list">
         <li><a href="/">Home</a></li>
@@ -21,7 +21,8 @@
   <div class="invest-section">
     <div class="invest-container">
       <h1>INVEST IN YOURSELF</h1>
-      <p>Select a pre-written program below to take the first steps on your journey toward a healthier lifestyle!
+      <p>Select a pre-written program below to take the first steps on your journey toward a healthier lifestyle!  Select the Custom Program
+        if you are looking for a more individual program tailored specifically for your needs!
       </p>
     </div>
   </div>
@@ -51,11 +52,13 @@
         <h4>Customized Program</h4>
         <p>2 Months</p>
         <p id="price">$250</p>
-        <button>Schedule Call</button>
+        <form action="/programs/Custom" method="GET">
+          <button id="Custom" type="submit">Schedule Call</button>
+        </form>
       </div>
     </div>
   </div> 
 
-  <script src="/programs.js"></script>
+  <script src="JS/programs.js"></script>
 </body>
 </html>
