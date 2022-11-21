@@ -161,7 +161,7 @@ app.get('/protectedProgramdata', authorization, async (req, res) => {
 //get Programs a user owns
 app.get('/user_programs', authorization, async (req, res) => {
   try{
-  const myOrders = await pool.query('SELECT programs.programname from programs INNER JOIN orders ON programs.stripe_price_key = orders.programid WHERE orders.userid = $1', [res.user]);
+  const myOrders = await pool.query('SELECT * from programs INNER JOIN orders ON programs.stripe_price_key = orders.programid WHERE orders.userid = $1', [res.user]);
   res.json(myOrders.rows)  
 } catch (err) {
     console.error(err.message);
@@ -241,7 +241,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), async (req, res) =
 
       //2. get product link based on stripe_price_key
        
-   let productLink;
+  let productLink;
   const setPLink = (rows) => {
     productLink = rows;
     console.log(productLink);
