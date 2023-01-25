@@ -108,8 +108,8 @@ app.get('/programs/Custom', async (req, res) => {
 app.get("/logout", authorization, (req, res) => {
   return res
   .clearCookie("access_token")
-  .status(200)
-  .json({ message: "Successfully logged out" });
+  .redirect('/login')
+  //.json({ message: "Successfully logged out" });
 });
 
 //Get Data from JW Route -Test(protected)
